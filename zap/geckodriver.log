@@ -1,0 +1,308 @@
+1667032259072	geckodriver	INFO	Listening on 127.0.0.1:41643
+1667032259116	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47311" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJxIUv8"
+Error: no DISPLAY environment variable specified
+1667032306350	geckodriver	INFO	Listening on 127.0.0.1:33753
+1667032306900	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "33607" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile7g5TwS"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667032307287	Marionette	INFO	Marionette enabled
+1667032307292	Marionette	INFO	Listening on port 39849
+Read port: 39849
+WebDriver BiDi listening on ws://localhost:33607
+1667032307436	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile7g5TwS/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:33607/devtools/browser/4a6978ac-fcec-4ad5-bd6f-c9320ccfbee9
+1667032586297	geckodriver	INFO	Listening on 127.0.0.1:57283
+1667032586894	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "35949" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileZy9ZiA"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667032587268	Marionette	INFO	Marionette enabled
+1667032587275	Marionette	INFO	Listening on port 33401
+WebDriver BiDi listening on ws://localhost:35949
+Read port: 33401
+1667032587427	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZy9ZiA/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:35949/devtools/browser/5862e9d6-12dd-4be2-8aab-ef5e87bab3b4
+1667032697766	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667032705363	geckodriver	INFO	Listening on 127.0.0.1:43473
+1667032705949	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "45303" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile7oAqhx"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667032706340	Marionette	INFO	Marionette enabled
+1667032706347	Marionette	INFO	Listening on port 38955
+Read port: 38955
+WebDriver BiDi listening on ws://localhost:45303
+1667032706526	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile7oAqhx/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:45303/devtools/browser/342f684a-cfd4-4866-aaea-34849d0ae49c
+1667032807098	geckodriver	INFO	Listening on 127.0.0.1:57769
+1667032807142	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "37671" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile7j0BQU"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667032807575	Marionette	INFO	Marionette enabled
+1667032807581	Marionette	INFO	Listening on port 42465
+WebDriver BiDi listening on ws://localhost:37671
+Read port: 42465
+1667032807737	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile7j0BQU/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:37671/devtools/browser/f063c562-acd4-49d7-a791-cbec3fc1df0c
+1667032903785	geckodriver	INFO	Listening on 127.0.0.1:35489
+1667032904333	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "35539" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilekivDxd"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667032904736	Marionette	INFO	Marionette enabled
+1667032904742	Marionette	INFO	Listening on port 35269
+WebDriver BiDi listening on ws://localhost:35539
+Read port: 35269
+1667032904928	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilekivDxd/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:35539/devtools/browser/8f68ae6e-fee7-4338-8318-7a069123a1f3
+1667032977324	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667033096418	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667033197644	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667033294805	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667033382836	geckodriver	INFO	Listening on 127.0.0.1:52119
+1667033383403	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "43185" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiley2DRZ6"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667033383836	Marionette	INFO	Marionette enabled
+1667033383841	Marionette	INFO	Listening on port 35443
+WebDriver BiDi listening on ws://localhost:43185
+Read port: 35443
+1667033383981	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiley2DRZ6/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:43185/devtools/browser/cd382af4-0b25-4fa3-b364-2988915f78e1
+1667033480859	geckodriver	INFO	Listening on 127.0.0.1:47635
+1667033481412	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "56621" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileicQ7oc"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667033481825	Marionette	INFO	Marionette enabled
+1667033481831	Marionette	INFO	Listening on port 43733
+WebDriver BiDi listening on ws://localhost:56621
+Read port: 43733
+1667033482032	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileicQ7oc/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:56621/devtools/browser/d57e41d5-71f5-4b7a-8b83-60bb753edd18
+1667033773907	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667033871905	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667033991949	geckodriver	INFO	Listening on 127.0.0.1:35885
+1667033992546	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "57725" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilev9OcKp"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667033992961	Marionette	INFO	Marionette enabled
+1667033992967	Marionette	INFO	Listening on port 33389
+WebDriver BiDi listening on ws://localhost:57725
+Read port: 33389
+1667033993126	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilev9OcKp/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:57725/devtools/browser/26698a5f-9dfb-47de-8984-702f1f35367a
+1667034363384	geckodriver	INFO	Listening on 127.0.0.1:57707
+1667034363986	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "54451" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileCTqTFw"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667034364403	Marionette	INFO	Marionette enabled
+1667034364409	Marionette	INFO	Listening on port 45665
+WebDriver BiDi listening on ws://localhost:54451
+Read port: 45665
+1667034364571	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileCTqTFw/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:54451/devtools/browser/b0b15260-7234-4641-a49b-df38559fb4b2
+1667034383069	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667034621533	geckodriver	INFO	Listening on 127.0.0.1:35389
+1667034622083	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "53149" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilebOSLti"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667034622495	Marionette	INFO	Marionette enabled
+1667034622501	Marionette	INFO	Listening on port 45905
+WebDriver BiDi listening on ws://localhost:53149
+Read port: 45905
+1667034622659	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilebOSLti/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:53149/devtools/browser/88c87ad3-1c16-48a6-ad6b-aec358f72bae
+1667034754472	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667035012555	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667035166148	geckodriver	INFO	Listening on 127.0.0.1:36667
+1667035166737	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "58671" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileMd8QJV"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667035167144	Marionette	INFO	Marionette enabled
+1667035167150	Marionette	INFO	Listening on port 43177
+WebDriver BiDi listening on ws://localhost:58671
+Read port: 43177
+1667035167337	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileMd8QJV/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:58671/devtools/browser/d50f24da-eec1-47da-aa70-374b460533be
+1667035316422	geckodriver	INFO	Listening on 127.0.0.1:42853
+1667035317040	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "50523" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilengB9hx"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667035317458	Marionette	INFO	Marionette enabled
+1667035317465	Marionette	INFO	Listening on port 40567
+WebDriver BiDi listening on ws://localhost:50523
+Read port: 40567
+1667035317617	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilengB9hx/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:50523/devtools/browser/ec568e69-6717-48eb-b8f3-667ff3ee2a6f
+1667035382764	geckodriver	INFO	Listening on 127.0.0.1:47429
+1667035383341	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "40673" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileV2Mmeh"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667035383763	Marionette	INFO	Marionette enabled
+1667035383771	Marionette	INFO	Listening on port 42819
+WebDriver BiDi listening on ws://localhost:40673
+Read port: 42819
+1667035383925	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileV2Mmeh/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:40673/devtools/browser/8474a13e-549b-4108-a95a-39aa47f62568
+1667035459525	geckodriver	INFO	Listening on 127.0.0.1:52323
+1667035460087	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "48931" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileV6WWHo"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667035460552	Marionette	INFO	Marionette enabled
+1667035460558	Marionette	INFO	Listening on port 43985
+WebDriver BiDi listening on ws://localhost:48931
+Read port: 43985
+1667035460719	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileV6WWHo/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:48931/devtools/browser/4ac0db5c-8f13-47b4-a6f7-d7c756862402
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:9000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:9000"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+1667035557241	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667035636554	geckodriver	INFO	Listening on 127.0.0.1:36077
+1667035637098	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "54219" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileF9OALu"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667035637569	Marionette	INFO	Marionette enabled
+1667035637579	Marionette	INFO	Listening on port 36943
+WebDriver BiDi listening on ws://localhost:54219
+Read port: 36943
+1667035637755	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileF9OALu/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:54219/devtools/browser/03ede98a-bb49-4ef1-abb1-00defe116f12
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:9000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:9000"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+1667035707575	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667035758593	geckodriver	INFO	Listening on 127.0.0.1:38627
+1667035759202	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "45697" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHjUF2W"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667035759641	Marionette	INFO	Marionette enabled
+1667035759647	Marionette	INFO	Listening on port 41587
+WebDriver BiDi listening on ws://localhost:45697
+Read port: 41587
+1667035759794	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHjUF2W/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:45697/devtools/browser/072ff89e-a39b-4d15-a2ad-4e9baf01e67a
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:9000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:9000"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+1667035773823	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+1667035850631	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1667036099291	geckodriver	INFO	Listening on 127.0.0.1:36653
+1667036099838	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "50833" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileowQzfu"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL initialize failed
+1667036100311	Marionette	INFO	Marionette enabled
+1667036100318	Marionette	INFO	Listening on port 41325
+WebDriver BiDi listening on ws://localhost:50833
+Read port: 41325
+1667036100475	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileowQzfu/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:50833/devtools/browser/485d6e11-87e1-4b41-8c25-695d8a1479f7
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:9000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:9000"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+1667036150157	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+JavaScript error: http://localhost:9000/static/js/gauge.min.js, line 1: TypeError: this.canvas is null
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
