@@ -57,33 +57,14 @@ while(int(zap.spider.status(scan_id)) < 100):
   time.sleep(2)
 
 print('[*] Spider Completed')
-print('[*] ZAP Spider Result: ', zap.core.urls())
+print('[*] ZAP Spider urls: ', zap.core.urls())
+print('[*] ZAP Spider stats: ', zap.stats.site_stats(site=target))
+print('[*] ZAP Spider params: ', zap.params.params())
+print('[*] ZAP Spider scanners: ', zap.pscan.scanners)
+print('[*] ZAP Spider alerts: ', zap.core.alerts(baseurl=target))
 
 ###############################################
-# Stage 3 - Active Scan
-###############################################
-# Create a new scan policy with attack threshold and attack strength (low)
-policyName = 'customPolicy'
-customPolicy = zap.ascan.add_scan_policy(policyName, alertthreshold='Low', attackstrength='Low')
-print('[*] ' + policyName + ' has been created')
-
-# # Query all scan policies by name
-# print(zap.ascan.scan_policy_names)
-
-# Start Active Scan 
-active_scan_id = zap.ascan.scan(target, scanpolicyname='customPolicy')
-print('[*] Active Scan Id: {0}'.format(active_scan_id))
-
-# Now we can start monitoring the spider's status
-while int(zap.ascan.status(active_scan_id)) < 100:
-    print('[*] Current Status of ZAP Active Scan: {0}%'.format(zap.ascan.status(active_scan_id)))
-    time.sleep(2)
-
-print('[*] Active Scan Completed')
-
-
-###############################################
-# Stage 4 - Report
+# Stage 3 - Report
 ###############################################
 headers = {
   'Accept': 'application/json'
@@ -91,7 +72,7 @@ headers = {
 r = requests.get('http://localhost:8090/OTHER/core/other/jsonreport/', params={}, headers = headers)
 r_json = json.loads(r.text)
 
-fileName = 'active_result.json'
+fileName = 'passive_result.json'
 with open(fileName, 'w') as fp:
     json.dump(r_json, fp)
 
@@ -99,7 +80,7 @@ print('[*] Check ' + fileName)
 
 
 ###############################################
-# Stage 5 - Shutdown
+# Stage 4 - Shutdown
 ###############################################
 zap.core.shutdown() 
 print("[*] ZAP has been Stopped !")

@@ -11,11 +11,10 @@ from zapv2 import ZAPv2 as ZAP # pip install python-owasp-zap-v2.4
 # Stage 1 - Setting
 ###############################################
 base_path = '/home/scent2d/tool/zap/ZAP_2.12.0/'
-headless_command = base_path + 'zap.sh -daemon -host 0.0.0.0 -port 8090 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true'
-# gui_command = base_path + 'zap.sh -config api.disablekey=true -port 8090'
+gui_command = base_path + 'zap.sh -config api.disablekey=true -port 8090'
 
-print('[*] Execute ZAP Command: ' + headless_command)
-zap_process = subprocess.Popen(headless_command.split(' '), stdout = open(os.devnull, 'w'))
+print('[*] Execute ZAP Command: ' + gui_command)
+zap_process = subprocess.Popen(gui_command.split(' '), stdout = open(os.devnull, 'w'))
 start_time = time.time()
 seconds = 30
 
@@ -91,7 +90,7 @@ headers = {
 r = requests.get('http://localhost:8090/OTHER/core/other/jsonreport/', params={}, headers = headers)
 r_json = json.loads(r.text)
 
-fileName = 'active_result.json'
+fileName = 'gui_result.json'
 with open(fileName, 'w') as fp:
     json.dump(r_json, fp)
 
