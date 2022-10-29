@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.9.10 on linux)" generated="20221029 21:36:08.615">
+<suite id="s1" name="Zap Test" source="/home/scent2d/study/python/zap/DAST-Script/robot/zap_test.robot">
+<test id="s1-t1" name="Start ZAP">
+<kw name="Start Headless Zap" library="RoboZap">
+<doc>Start OWASP ZAP without a GUI</doc>
+<arguments>
+<arg>${ZAP_PATH}</arg>
+</arguments>
+<msg timestamp="20221029 21:36:18.842" level="INFO">/home/scent2d/tool/zap/ZAP_2.12.0/zap.sh -daemon -config api.disablekey=true -port 8090</msg>
+<status status="PASS" starttime="20221029 21:36:08.830" endtime="20221029 21:36:18.842"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>30</arg>
+</arguments>
+<msg timestamp="20221029 21:36:48.844" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20221029 21:36:18.843" endtime="20221029 21:36:48.845"></status>
+</kw>
+<kw name="Zap Open Url" library="RoboZap">
+<doc>Invoke URLOpen with ZAP</doc>
+<arguments>
+<arg>${ZAP_TARGET}</arg>
+</arguments>
+<status status="PASS" starttime="20221029 21:36:48.846" endtime="20221029 21:36:53.246"></status>
+</kw>
+<status status="PASS" starttime="20221029 21:36:08.829" endtime="20221029 21:36:53.247" critical="yes"></status>
+</test>
+<test id="s1-t2" name="ZAP Contextualize">
+<kw name="Zap Define Context" library="RoboZap">
+<doc>Add Target to a context and use the context to perform all scanning/spidering operations</doc>
+<arguments>
+<arg>${CONTEXT}</arg>
+<arg>${ZAP_TARGET}</arg>
+</arguments>
+<assign>
+<var>${contextid}</var>
+</assign>
+<msg timestamp="20221029 21:36:59.546" level="INFO">${contextid} = 1</msg>
+<status status="PASS" starttime="20221029 21:36:53.255" endtime="20221029 21:36:59.547"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${CONTEXT_ID}</arg>
+<arg>${contextid}</arg>
+</arguments>
+<msg timestamp="20221029 21:36:59.552" level="INFO">${CONTEXT_ID} = 1</msg>
+<status status="PASS" starttime="20221029 21:36:59.548" endtime="20221029 21:36:59.553"></status>
+</kw>
+<status status="PASS" starttime="20221029 21:36:53.249" endtime="20221029 21:36:59.556" critical="yes"></status>
+</test>
+<test id="s1-t3" name="ZAP Crawl">
+<kw name="Zap Start Spider" library="RoboZap">
+<doc>Start ZAP Spider with ZAP's inbuilt spider mode</doc>
+<arguments>
+<arg>${CONTEXT}</arg>
+<arg>${ZAP_TARGET}</arg>
+</arguments>
+<assign>
+<var>${spider_id}</var>
+</assign>
+<msg timestamp="20221029 21:37:01.632" level="INFO">${spider_id} = 0</msg>
+<status status="PASS" starttime="20221029 21:36:59.561" endtime="20221029 21:37:01.632"></status>
+</kw>
+<kw name="Zap Spider Status" library="RoboZap">
+<doc>Fetches the status for the spider id provided by the user</doc>
+<arguments>
+<arg>${spider_id}</arg>
+</arguments>
+<status status="PASS" starttime="20221029 21:37:01.633" endtime="20221029 21:37:01.660"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>30</arg>
+</arguments>
+<msg timestamp="20221029 21:37:31.662" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20221029 21:37:01.661" endtime="20221029 21:37:31.662"></status>
+</kw>
+<status status="PASS" starttime="20221029 21:36:59.558" endtime="20221029 21:37:31.663" critical="yes"></status>
+</test>
+<test id="s1-t4" name="ZAP Active Scan">
+<kw name="Zap Start Ascan" library="RoboZap">
+<doc>Initiates ZAP Active Scan on the target url and context</doc>
+<arguments>
+<arg>${CONTEXT_ID}</arg>
+<arg>${ZAP_TARGET}</arg>
+<arg>${SCANPOLICY}</arg>
+</arguments>
+<assign>
+<var>${scan_id}</var>
+</assign>
+<msg timestamp="20221029 21:37:33.797" level="INFO">${scan_id} = 0</msg>
+<status status="PASS" starttime="20221029 21:37:31.666" endtime="20221029 21:37:33.798"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="FAIL" starttime="20221029 21:37:33.798" endtime="20221029 21:37:34.574"></status>
+</kw>
+<status status="FAIL" starttime="20221029 21:37:31.664" endtime="20221029 21:37:34.575" critical="yes">Execution terminated by signal</status>
+</test>
+<test id="s1-t5" name="ZAP Generate Report">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20221029 21:37:34.576" endtime="20221029 21:37:34.576" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t6" name="ZAP Die">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20221029 21:37:34.579" endtime="20221029 21:37:34.580" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" starttime="20221029 21:36:08.615" endtime="20221029 21:37:34.583"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="3">Critical Tests</stat>
+<stat pass="3" fail="3">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="1" info="combined" combined="NOT robot-exit">NOT robot-exit</stat>
+<stat pass="0" fail="2">robot-exit</stat>
+</tag>
+<suite>
+<stat pass="3" fail="3" id="s1" name="Zap Test">Zap Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
