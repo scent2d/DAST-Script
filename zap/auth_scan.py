@@ -84,13 +84,13 @@ policyName = 'customPolicy'
 if policyName not in zap.ascan.scan_policy_names:
     print('[*] ' + policyName + ' has been created')
     zap.ascan.add_scan_policy(
-        policyName, alertthreshold="High", attackstrength="High")
+        policyName, alertthreshold="Low", attackstrength="Low")
 
 # # Query all scan policies by name
 # print(zap.ascan.scan_policy_names)
 
 # Start Active Scan 
-active_scan_id = zap.ascan.scan(target, scanpolicyname='customPolicy')
+active_scan_id = zap.ascan.scan(target, scanpolicyname=policyName)
 print('[*] Active Scan Id: {0}'.format(active_scan_id))
 
 # Now we can start monitoring the spider's status
