@@ -90,7 +90,7 @@ headers = {
 r = requests.get('http://localhost:8090/OTHER/core/other/jsonreport/', params={}, headers = headers)
 r_json = json.loads(r.text)
 
-fileName = 'gui_result.json'
+fileName = 'result/gui_result.json'
 with open(fileName, 'w') as fp:
     json.dump(r_json, fp)
 

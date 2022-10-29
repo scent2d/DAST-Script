@@ -91,7 +91,7 @@ headers = {
 r = requests.get('http://localhost:8090/OTHER/core/other/jsonreport/', params={}, headers = headers)
 r_json = json.loads(r.text)
 
-fileName = 'active_result.json'
+fileName = 'result/active_result.json'
 with open(fileName, 'w') as fp:
     json.dump(r_json, fp)
 
