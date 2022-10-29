@@ -69,7 +69,7 @@ time.sleep(1)
 # Now we can start monitoring the Spider's status
 while(int(zap.spider.status(scan_id)) < 100):
   print('[*] Current Status of ZAP Spider: {0}%'.format(zap.spider.status(scan_id)))
-  time.sleep(2)
+  time.sleep(5)
 
 print('[*] Spider Completed')
 print('[*] ZAP Spider Result: ', zap.core.urls())
@@ -80,8 +80,11 @@ print('[*] ZAP Spider Result: ', zap.core.urls())
 ###############################################
 
 policyName = 'customPolicy'
-customPolicy = zap.ascan.add_scan_policy(policyName, alertthreshold='High', attackstrength='High')
-print('[*] ' + policyName + ' has been created')
+
+if policyName not in zap.ascan.scan_policy_names:
+    print('[*] ' + policyName + ' has been created')
+    zap.ascan.add_scan_policy(
+        policyName, alertthreshold="High", attackstrength="High")
 
 # # Query all scan policies by name
 # print(zap.ascan.scan_policy_names)
@@ -93,7 +96,7 @@ print('[*] Active Scan Id: {0}'.format(active_scan_id))
 # Now we can start monitoring the spider's status
 while int(zap.ascan.status(active_scan_id)) < 100:
     print('[*] Current Status of ZAP Active Scan: {0}%'.format(zap.ascan.status(active_scan_id)))
-    time.sleep(2)
+    time.sleep(10)
 
 print('[*] Active Scan Completed')
 
