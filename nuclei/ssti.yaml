@@ -1,0 +1,17 @@
+id: ssti
+info:
+  name: Server Side Template Injection
+  severity: high
+  description: JINJA2 Template Injection
+requests:  
+  - method: GET
+    path:
+      - "{{BaseURL}}/not-found?page={{4*4}}"
+
+    matchers-condition: and
+    
+    matchers:
+      - type: word
+        words:
+          - "16 Page you are looking for cannot be found!"
+        part: body
