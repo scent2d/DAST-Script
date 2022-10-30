@@ -1,0 +1,16 @@
+id: insecure-deserialization
+
+info:
+  name: Insecure Deserialization
+  severity: high
+  description: Local source scan for Insecure Deserialization
+
+file:
+  - extensions:
+      - py
+
+    extractors:
+      - type: regex
+        name: dangerous-yaml
+        regex:
+          - 'yaml.load'
