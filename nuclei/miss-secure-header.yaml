@@ -2,7 +2,7 @@ id:miss-secure-header
 
 info:
   name: HTTP Missing Security Headers
-  severity: Medium
+  severity: medium
   description: Check Missing HTTP Security Headers
 
 requests:

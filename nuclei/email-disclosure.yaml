@@ -2,7 +2,7 @@ id: email-disclosure
 
 info:
   name: Email Address Disclosure
-  severity: Low
+  severity: low
   description: Check Email Address Disclosure
 
 requests:

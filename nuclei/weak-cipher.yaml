@@ -1,7 +1,7 @@
 id: weak-cipher
 info:
   name: Weak Cipher
-  severity: Medium
+  severity: medium
   description: Scan for Weak Cipher (ssllabs)
 requests:
   - method: GET
