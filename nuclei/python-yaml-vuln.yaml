@@ -1,4 +1,4 @@
-id: insecure-deserialization
+id: python-yaml-vuln
 
 info:
   name: Insecure Deserialization

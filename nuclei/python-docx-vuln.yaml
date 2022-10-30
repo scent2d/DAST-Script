@@ -1,0 +1,16 @@
+id: python-docx-vuln
+
+info:
+  name: XML Entity Injection
+  severity: high
+  description: Scan for XML Entity Injection
+
+file:
+  - extensions:
+      - .txt
+
+    extractors:
+      - type: regex
+        name: vulnerable-python-docx-version
+        regex:
+          - 'python-docx==0.8.3'

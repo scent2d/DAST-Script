@@ -1,4 +1,4 @@
-id: insecure-jwt
+id: python-jwt-vuln
 
 info:
   name: Insecure JWT Verification
