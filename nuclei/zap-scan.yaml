@@ -1,0 +1,41 @@
+id: zap-scan
+info:
+  name: ZAP DAST SCAN
+  severity: high
+  description: ZAP dast scan on open urls of flask app
+  
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        part: body
+        words:
+          - "Vulnerable App"
+          - "yaml_hammer"
+  - method: GET
+    path:
+      - "{{BaseURL}}/register/customer"
+    matchers:
+      - type: status
+        status:
+          - 405
+      - type: word
+        part: body
+        words:
+          - "Method Not Allowed" 
+  - method: GET
+    path:
+      - "{{BaseURL}}/yaml"
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        part: body
+        words:
+          - "Here is an interesting quote for you"
