@@ -1,0 +1,54 @@
+id: reflected-xss
+info:
+  name: Reflected XSS
+  severity: high
+  description: Scan for Reflected XSS
+
+requests:
+  - raw:
+    - |
+        GET /unsafe?name=<script>alert(1)</script> HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"email":"user@corp.com","password":"Hello1234"}
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        words:
+          - "<script>alert(1)</script>"
+        part: body
+
+      - type: word
+        words:
+          - "text/html"
+        part: header
+
+  - raw:  
+    - |
+        GET /safe?name=<script>alert(1)</script> HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"email":"attacker@corp.com","password":"Hello123"}
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        words:
+          - "<script>alert(1)</script>"
+        part: body
+
+      - type: word
+        words:
+          - "text/html"
+        part: header
