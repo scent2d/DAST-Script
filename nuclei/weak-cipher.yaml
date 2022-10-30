@@ -1,0 +1,25 @@
+id: weak-cipher
+info:
+  name: Weak Cipher
+  severity: Medium
+  description: Scan for Weak Cipher (ssllabs)
+requests:
+  - method: GET
+    path:
+      - "https://www.ssllabs.com/ssltest/analyze.html?d={{BaseURL}}"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "Cipher Suites"
+
+      - type: word
+        part: body
+        words:
+          - "WEAK"
+          
+      - type: status
+        status:
+           - 200

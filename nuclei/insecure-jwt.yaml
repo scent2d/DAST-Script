@@ -1,0 +1,16 @@
+id: insecure-jwt
+
+info:
+  name: Insecure JWT Verification
+  severity: high
+  description: Local source scan for Insecure JWT Verification
+
+file:
+  - extensions:
+      - py
+
+    extractors:
+      - type: regex
+        name: insecure-jwt-verification
+        regex:
+          - 'options={"verify_signature": False}'

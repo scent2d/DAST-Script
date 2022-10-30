@@ -1,0 +1,41 @@
+id: sql-injection
+info:
+  name: SQL Injection
+  severity: high
+  description: SQL Injection
+requests:
+  - method: POST
+    path:
+      - "{{BaseURL}}/users/insecure/search"
+    headers:
+      Content-Type: application/json
+    body: "{\"email\":\"abc' or '1=1\"}"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "email"
+          
+      - type: status
+        status:
+           - 200
+
+  - method: POST
+    path:
+      - "{{BaseURL}}/users/secure/search"
+    headers:
+      Content-Type: application/json
+    body: "{\"email\":\"abc' or '1=1\"}"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "email"
+          
+      - type: status
+        status:
+           - 200
